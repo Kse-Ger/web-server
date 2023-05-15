@@ -13,7 +13,7 @@ weatherform.addEventListener('submit', (e) => {
     const city = searchcity.value
     const countrycode = searchcountrycode.value
     
-    fetch('http://localhost:3000/weather?city=' + city + '&countryCode=' + countrycode).then((res) => {
+    fetch('/weather?city=' + city + '&countryCode=' + countrycode).then((res) => {
     res.json().then((data) => {
         if (data.error) {
             messageOne.textContent = data.error
